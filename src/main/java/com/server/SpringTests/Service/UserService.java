@@ -29,8 +29,11 @@ public class UserService {
         return userRepos.save(user);
     }
 
-    public List<UserEntity> getAll(){
-        return Streamable.of(userRepos.findAll()).stream().toList();
+    public List<UserPasswordlessDTO> getAll(){
+            List<UserPasswordlessDTO> userEntities =
+                    Streamable.of(userRepos.findAll()).stream()
+                    .map(user -> modelMapper.map(user, UserPasswordlessDTO.class)).toList();
+        return userEntities;
     }
 
     public UserPasswordlessDTO getOne(Long id) throws UserNotFoundException {
@@ -41,6 +44,13 @@ public class UserService {
             throw new UserNotFoundException("Пользователь не найден");
         }
         return modelMapper.map(user, UserPasswordlessDTO.class);
-        //Конвертируем в ДТО, у которого нет пароля, чтобы при запросе не возвращать его
+        //Конвертируем в ДТО, у которого нет пароля, чтобы при запросе не возвращать этот самый пароль
+        //так сказать обрезаем информацию
+    }
+
+    public Long delete(Long id){
+        userRepos.deleteById(id);
+        // Если хотим удалять по логину, то в репозитории добавляем эту функцию
+        return id;
     }
 }
