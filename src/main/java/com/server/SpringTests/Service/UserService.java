@@ -37,18 +37,26 @@ public class UserService {
     }
 
     public UserPasswordlessDTO getOne(Long id) throws UserNotFoundException {
-        UserEntity user = userRepos.findById(id).get();
+        UserEntity user = userRepos.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь не найден"));
 
         //почему-то не пробрасывает ошибку
-        if (user == null) {
-            throw new UserNotFoundException("Пользователь не найден");
-        }
+//        if (user == null) {
+//            throw new UserNotFoundException("Пользователь не найден");
+//        }
         return modelMapper.map(user, UserPasswordlessDTO.class);
         //Конвертируем в ДТО, у которого нет пароля, чтобы при запросе не возвращать этот самый пароль
         //так сказать обрезаем информацию
     }
 
-    public Long delete(Long id){
+    public UserEntity updateUser(UserEntity user, Long id) throws UserNotFoundException {
+        UserEntity new_user = userRepos.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь для обновления не найден"));
+        if (user.getLogin() != null) new_user.setLogin(user.getLogin());
+        if (user.getPassword() != null) new_user.setPassword(user.getPassword());
+        return modelMapper.map(userRepos.save(new_user), UserEntity.class);
+    }
+
+    public Long delete(Long id) throws UserNotFoundException{
+        UserEntity user = userRepos.findById(id).orElseThrow(() -> new UserNotFoundException("Пользователь для удаления не найден"));
         userRepos.deleteById(id);
         // Если хотим удалять по логину, то в репозитории добавляем эту функцию
         return id;
