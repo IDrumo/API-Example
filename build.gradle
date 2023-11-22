@@ -22,15 +22,16 @@ repositories {
 }
 
 dependencies {
-	implementation group: 'com.typesafe.akka', name: 'akka-stream_2.13', version: '2.8.4'
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '3.1.3'
-	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	runtimeOnly 'org.postgresql:postgresql'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation group: 'com.typesafe.akka', name: 'akka-stream_2.13', version: '2.8.4' //Не могу вспомнить
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'//Для работы с БД
+	implementation 'org.flywaydb:flyway-core' //для миграций
+	implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.1.1' //для того, чтобы легко конвертировать классы в DTO
+	implementation 'org.springframework.boot:spring-boot-starter-web'//для того чтобы поднять сервер на локалке
+	compileOnly 'org.projectlombok:lombok' //для @Getter, @Setter, @Data
+	developmentOnly 'org.springframework.boot:spring-boot-devtools' //не могу сообщить точную информацию
+	runtimeOnly 'org.postgresql:postgresql' //для работы с postgresql
+	annotationProcessor 'org.projectlombok:lombok' //для @Getter, @Setter, @Data
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'//автоматические тесты от Spring
 }
 
 tasks.named('test') {
