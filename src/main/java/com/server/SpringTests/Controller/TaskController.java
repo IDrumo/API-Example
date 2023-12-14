@@ -15,7 +15,7 @@ public class TaskController {
     private TaskService taskService;
 
     @PostMapping
-    public ResponseEntity createTask(@RequestBody TaskEntity task,
+    public ResponseEntity<?> createTask(@RequestBody TaskEntity task,
                                      @RequestParam Long userId){
         try {
             return ResponseEntity.ok(taskService.createTask(task, userId));
@@ -25,7 +25,7 @@ public class TaskController {
     }
 
     @PutMapping
-    public ResponseEntity updateTaskStatus(@RequestParam Long id){
+    public ResponseEntity<?> updateTaskStatus(@RequestParam Long id){
         try {
             return ResponseEntity.ok(taskService.updateStatus(id));
         }catch (Exception e){

@@ -1,7 +1,0 @@
-package com.server.SpringTests.Exceptions;
-
-public class UserNotFoundException extends Exception{
-    public UserNotFoundException(String message) {
-        super(message);
-    }
-}
