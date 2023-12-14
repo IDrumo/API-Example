@@ -3,7 +3,8 @@
 
 Ссылки для обучения, скачивания и полезной информации:
 
-https://mavenlibs.com - сайт с библиотеками
-https://www.postman.com - сайт для тестировки API
+Cайт с [библиотеками](https://mavenlibs.com)
+Сайт для [тестировки](https://www.postman.com) API
 
-https://www.youtube.com/watch?v=q87Xxu4NPIc - крутой гайд REST API
+[Крутой гайд](https://www.youtube.com/watch?v=q87Xxu4NPIc) REST API. По нему можно сделать все до миграций
+Еще один крутой [гайд](https://www.youtube.com/watch?v=DJvjz5d6pLo&t=1919s), но уже для более шарящих, я бы сказал второй шаг и закрепление (На 35ой минуте чел еще рассказывает про централизированную систему обработки ошибок) 
