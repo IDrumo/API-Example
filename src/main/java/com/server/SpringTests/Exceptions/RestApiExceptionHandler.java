@@ -30,16 +30,15 @@ public class RestApiExceptionHandler {
         // Суть в том, что когда где-нибудь в коде возникает ошибка, она прилетит сюда
     }
 
-    @ExceptionHandler(value = {UserAlreadyExistException.class})
-    // Обработка UserAlreadyExistException
-    public ResponseEntity<?> alreadyExistHandleException(UserAlreadyExistException e){
+    @ExceptionHandler(value = {ApiException.class})
+    // Обработка всех ошибок, которые наследуются от ApiException
+    // Можно было использовать
+    // @ExceptionHandler(value = {UserNotFoundException.class, UserAlreadyExistException.class})
+    // То есть перечислить все, обрабатываемые одинаково, ошибки через запятую эквивалентно указанию родительского класса этих ошибок
+    public ResponseEntity<?> apiException(UserAlreadyExistException e){
         return ResponseEntity.badRequest().body(e.getMessage() + " P.S. от RestApiExceptionHandler");
     }
-    @ExceptionHandler(value = {UserNotFoundException.class})
-    // Обработка UserNotFoundException
-    public ResponseEntity<?> notFoundHandleException(UserNotFoundException e){
-        return ResponseEntity.badRequest().body(e.getMessage() + " P.S. от RestApiExceptionHandler");
-    }
+
 
     @ExceptionHandler(value = {CommonException.class})
     // Обработка CommonException
