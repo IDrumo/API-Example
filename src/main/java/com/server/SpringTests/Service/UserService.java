@@ -1,12 +1,12 @@
 package com.server.SpringTests.Service;
 
-import com.server.SpringTests.Constants.Code;
+import com.server.SpringTests.model.Constants.Code;
 import com.server.SpringTests.DTO.UserPasswordlessDTO;
-import com.server.SpringTests.Entity.UserEntity;
-import com.server.SpringTests.Response.Error.Error;
-import com.server.SpringTests.Response.Exceptions.CommonException;
-import com.server.SpringTests.Response.Exceptions.UserAlreadyExistException;
-import com.server.SpringTests.Response.Exceptions.UserNotFoundException;
+import com.server.SpringTests.model.UserEntity;
+import com.server.SpringTests.DTO.Error.Error;
+import com.server.SpringTests.Exceptions.CommonException;
+import com.server.SpringTests.Exceptions.UserAlreadyExistException;
+import com.server.SpringTests.Exceptions.UserNotFoundException;
 import com.server.SpringTests.Repository.UserRepos;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

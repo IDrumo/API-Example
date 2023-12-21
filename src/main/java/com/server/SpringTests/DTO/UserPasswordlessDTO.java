@@ -1,6 +1,5 @@
 package com.server.SpringTests.DTO;
 
-import com.server.SpringTests.Entity.TaskEntity;
 import lombok.Data;
 
 import java.util.List;

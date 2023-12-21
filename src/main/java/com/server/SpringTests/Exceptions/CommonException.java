@@ -1,6 +1,6 @@
-package com.server.SpringTests.Response.Exceptions;
+package com.server.SpringTests.Exceptions;
 
-import com.server.SpringTests.Response.Error.Error;
+import com.server.SpringTests.DTO.Error.Error;
 import lombok.Data;
 
 @Data

@@ -1,4 +1,4 @@
-package com.server.SpringTests.Response.Exceptions;
+package com.server.SpringTests.Exceptions;
 
 public class UserAlreadyExistException extends RuntimeException{
     public UserAlreadyExistException(String message) {

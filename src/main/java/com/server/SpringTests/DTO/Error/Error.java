@@ -1,6 +1,6 @@
-package com.server.SpringTests.Response.Error;
+package com.server.SpringTests.DTO.Error;
 
-import com.server.SpringTests.Constants.Code;
+import com.server.SpringTests.model.Constants.Code;
 import lombok.Builder;
 import lombok.Data;
 

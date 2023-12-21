@@ -1,4 +1,4 @@
-package com.server.SpringTests.Entity;
+package com.server.SpringTests.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

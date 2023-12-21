@@ -1,13 +1,12 @@
 package com.server.SpringTests.Service;
 
 import com.server.SpringTests.DTO.TaskNoUserDTO;
-import com.server.SpringTests.Entity.TaskEntity;
-import com.server.SpringTests.Entity.UserEntity;
+import com.server.SpringTests.model.TaskEntity;
+import com.server.SpringTests.model.UserEntity;
 import com.server.SpringTests.Repository.TaskRepos;
 import com.server.SpringTests.Repository.UserRepos;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 @Service

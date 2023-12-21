@@ -1,10 +1,9 @@
 package com.server.SpringTests.Controller;
 
-import com.server.SpringTests.Entity.TaskEntity;
+import com.server.SpringTests.model.TaskEntity;
 import com.server.SpringTests.Service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

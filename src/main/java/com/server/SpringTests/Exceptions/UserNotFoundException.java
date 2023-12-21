@@ -1,4 +1,4 @@
-package com.server.SpringTests.Response.Exceptions;
+package com.server.SpringTests.Exceptions;
 
 public class UserNotFoundException extends RuntimeException{
     public UserNotFoundException(String message) {

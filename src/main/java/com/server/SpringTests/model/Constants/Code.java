@@ -1,4 +1,4 @@
-package com.server.SpringTests.Constants;
+package com.server.SpringTests.model.Constants;
 
 public enum Code {
     CUSTOM_ERROR_CODE_1,

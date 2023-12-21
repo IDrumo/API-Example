@@ -1,12 +1,8 @@
 package com.server.SpringTests.Controller;
 
-import com.server.SpringTests.DTO.ErrorDTO;
-import com.server.SpringTests.Entity.UserEntity;
-import com.server.SpringTests.Response.Exceptions.UserAlreadyExistException;
-import com.server.SpringTests.Response.Exceptions.UserNotFoundException;
+import com.server.SpringTests.model.UserEntity;
 import com.server.SpringTests.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

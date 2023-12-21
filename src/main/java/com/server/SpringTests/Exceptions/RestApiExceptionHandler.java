@@ -1,12 +1,8 @@
-package com.server.SpringTests.Response;
+package com.server.SpringTests.Exceptions;
 
-import com.server.SpringTests.Constants.Code;
-import com.server.SpringTests.Response.Error.Error;
-import com.server.SpringTests.Response.Error.ErrorResponse;
-import com.server.SpringTests.Response.Exceptions.CommonException;
-import com.server.SpringTests.Response.Exceptions.UserAlreadyExistException;
-import com.server.SpringTests.Response.Exceptions.UserNotFoundException;
-import org.springframework.http.HttpStatus;
+import com.server.SpringTests.model.Constants.Code;
+import com.server.SpringTests.DTO.Error.Error;
+import com.server.SpringTests.DTO.Error.ErrorResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

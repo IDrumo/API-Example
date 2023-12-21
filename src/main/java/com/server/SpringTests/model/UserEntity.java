@@ -1,10 +1,7 @@
-package com.server.SpringTests.Entity;
+package com.server.SpringTests.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.util.List;
 
